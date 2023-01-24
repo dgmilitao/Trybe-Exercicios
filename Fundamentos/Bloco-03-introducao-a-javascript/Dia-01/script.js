@@ -75,4 +75,32 @@ if (somaAngulo === 180){
     console.log(false);
 } else if (somaAngulo < 0) {
     console.log('Erro: Angulo invalido!')
-}    
+} 
+
+/* Utilize switch/case para escrever um código que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+Como desafio, escreva um código para funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+
+Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case).
+
+Se a peça passada for inválida, o código deve retornar uma mensagem de erro.
+
+Exemplo: bishop (bispo) -> diagonals (diagonais)*/
+
+let PecaXadrex = 'Rainha';
+
+switch(PecaXadrex.toLowerCase){
+    case 'Rainha':
+    console.log('Move-se na diagonal, vertical e horizontal'); break;
+    case 'Rei':
+    console.log('Move-se uma casa para qualquer direção'); break;
+    case 'Bispo':
+    console.log('Move-se na diagonal'); break;
+    case 'Torre':
+    console.log('Move-se na horizontal e vertical'); break;
+    case 'Cavalo':
+    console.log('Move-se em "L" e pode pular peças'); break;
+    case 'Peão':
+    console.log('Apenas uma casa para frente, no primeiro movimento podem ser duas casas'); break;
+    default:
+        console.log('Erro! Peça invalida')
+}

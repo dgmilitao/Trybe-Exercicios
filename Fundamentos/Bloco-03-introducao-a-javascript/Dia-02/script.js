@@ -30,7 +30,7 @@ console.log(media);
 if (media > 20) {
     console.log('Valor é maior que 20');
 } else {
-    console.log("Valor [e menor que 20");
+    console.log("Valor é menor que 20");
 }
 
 /* Utilizando for, descubra qual o maior valor contido no array e imprima-o;*/

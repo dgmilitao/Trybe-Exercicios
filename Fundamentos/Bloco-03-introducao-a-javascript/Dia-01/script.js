@@ -88,19 +88,47 @@ Exemplo: bishop (bispo) -> diagonals (diagonais)*/
 
 let PecaXadrex = 'Rainha';
 
-switch(PecaXadrex.toLowerCase){
+switch(PecaXadrex){
     case 'Rainha':
-    console.log('Move-se na diagonal, vertical e horizontal'); break;
+    console.log('Rainha -> Move-se na diagonal, vertical e horizontal'); 
+    break;
     case 'Rei':
-    console.log('Move-se uma casa para qualquer direção'); break;
+    console.log('Rei -> Move-se uma casa para qualquer direção'); 
+    break;
     case 'Bispo':
-    console.log('Move-se na diagonal'); break;
+    console.log('Bispo -> Move-se na diagonal'); 
+    break;
     case 'Torre':
-    console.log('Move-se na horizontal e vertical'); break;
+    console.log('Torre -> Move-se na horizontal e vertical'); 
+    break;
     case 'Cavalo':
-    console.log('Move-se em "L" e pode pular peças'); break;
+    console.log('Cavalo -> Move-se em "L" e pode pular peças'); 
+    break;
     case 'Peão':
-    console.log('Apenas uma casa para frente, no primeiro movimento podem ser duas casas'); break;
+    console.log('Peão -> Apenas uma casa para frente, no primeiro movimento podem ser duas casas'); 
+    break;
     default:
-        console.log('Erro! Peça invalida')
+        console.log('Erro! Peça invalida'); break;
 }
+
+/*Utilize if/else para escrever um código que converta uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:*/
+
+nota = 67;
+
+if (nota < 0 || nota > 100) {
+    console.log ('Erro! Nota invalida')
+} else if (nota >= 90) {
+    console.log('A');
+} else if (nota >= 80) {
+    console.log('B');
+} else if (nota >= 70) {
+    console.log('C');
+}  else if (nota >= 60) {
+    console.log('D');
+} else if (nota >= 50) {
+    console.log('E');
+} else if (nota < 50) {
+    console.log('F');
+} 
+
+

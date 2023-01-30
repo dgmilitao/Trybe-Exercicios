@@ -80,3 +80,7 @@ let names = {
     person2: 'Maria',
     person3: 'Jorge',
   };
+
+for (let i in names) {
+    console.log('Ola! ' + names[i]);
+}

@@ -12,7 +12,12 @@ Declare dentro da função uma variável do tipo const, com o nome frase, atribu
 
 A função deverá retornar uma nova frase em que o x da frase 'Tryber x aqui!' seja substituído pelo nome passado por parâmetro.
 
-Exemplo: */
+Exemplo:
+
+Parâmetro: ‘Bebeto’
+Retorno: ‘Tryber Bebeto aqui!’
+Spoiler: O método split() pode ser utilizado de diferentes maneiras, como para separar as palavras de um texto.
+
 
 /* const substituaX = (nome) => {
   const frase = "Trybe x aqui";
@@ -30,13 +35,53 @@ console.log(substituaX("Daniel")); */
 // OU
 
 const substituaX = (nome) => {
-    const frase = 'Trybe x Aqui';
-    const fraseArray = frase.split(' ');
-    for (palavra in fraseArray) {
-        if (fraseArray[palavra] === 'x'){
-            fraseArray[palavra] = nome;
-        }
+  const frase = "Trybe x Aqui";
+  const fraseArray = frase.split(" ");
+  for (palavra in fraseArray) {
+    if (fraseArray[palavra] === "x") {
+      fraseArray[palavra] = nome;
     }
-    return fraseArray.join(' ');
-}
-console.log(substituaX('Daniel'));
+  }
+  return fraseArray.join(" ");
+};
+console.log(substituaX("Daniel"));
+
+/* Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
+
+O nome da função deverá ser minhasSkills;
+
+A função deverá receber o retorno da Função 1 - substituaX por parâmetro;
+
+Declare dentro da função uma variável com o nome skills, do tipo const;
+
+A variável skills deverá ser um array contendo três strings com tecnologias que você já aprendeu.
+Crie uma varável do tipo let e concatene o valor retornado da Função 1 - substituaX (utilize template literals), a frase 'Minhas três principais habilidades são:' e o valor da variável skills.
+
+Exemplo de retorno:
+
+Tryber Bebeto aqui!
+
+Minhas três principais habilidades são:
+
+JavaScript
+HTML
+CSS
+
+Não se esqueça de usar template literals */
+
+const minhasSkills = (func) => {
+  const skills = ["JavaScript", "HTML", "CSS"];
+  let final = `
+    
+${func}
+  
+Minhas três principais habilidades são: 
+  
+${skills[0]}
+${skills[1]}
+${skills[2]}`;
+
+  return final;
+};
+
+console.log(minhasSkills(substituaX('Daniel')));

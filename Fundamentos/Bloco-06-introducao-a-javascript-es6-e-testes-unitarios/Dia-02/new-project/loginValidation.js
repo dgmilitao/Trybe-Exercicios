@@ -12,7 +12,7 @@ const user = {
 };
 
 const verifyCredentials = (userInfo) => {
-  const userName = user.info.userName;
+  const userName = user.userName;
   const password = user.password;
   if (password === 123456 && userName === "Bob") {
     return greetingMessage(userName);
@@ -20,5 +20,7 @@ const verifyCredentials = (userInfo) => {
     return loginErroMessage(userName);
   }
 };
+
+console.log(verifyCredentials(user));
 
 module.exports = {greetingMessage, loginErrorMessage, verifyCredentials};

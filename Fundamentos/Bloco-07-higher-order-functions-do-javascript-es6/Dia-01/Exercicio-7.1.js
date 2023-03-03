@@ -160,7 +160,7 @@ const books = [
   
 // Adicione o código do exercício aqui:
 
-//   Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
+// Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 
 const authorBornIn1947 = (array) => array.find((array) => array.author.birthYear === 1947).author.name;
  
@@ -179,3 +179,33 @@ const smallerName = (array) => {
 }
 
 console.log(smallerName(books));
+
+// Encontre o primeiro livro cujo nome possua 26 caracteres.
+
+const getNamedBook = (array) => array.find(array => array.name.length === 26);
+
+console.log(getNamedBook(books));
+
+// Faça uma função que retorne true se todas as pessoas autoras tiverem nascido no século XX, ou false, caso contrário.
+
+const expectedResult = false;
+
+function everyoneWasBornOnSecXX (array) {
+  return array.every(array => array.author.birthYear > 1901 && array.author.birthYear < 2000);
+}
+
+console.log(everyoneWasBornOnSecXX(books));
+
+// Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.\\const expectedResult = true;
+
+const someBookWasReleaseOnThe80s = (array) => array.some(array => array.releaseYear >= 1980 && array.releaseYear < 1989);  
+
+console.log(someBookWasReleaseOnThe80s(books));
+
+// Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
+
+const authorUnique = (array) => {
+  return array.some(array => array.author.birthYear === array.author.birthYear && array.author.name !== array.author.name);
+}
+
+console.log(authorUnique(books));
